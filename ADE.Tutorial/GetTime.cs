@@ -41,7 +41,7 @@ namespace ADE.Tutorial
 
             return response;
         }
-        public HttpRequestData RunApp(){
+        public HttpResponseData RunApp(){
             logger.LogInformation("C# HTTP trigger function processed a request on RunApp.");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
