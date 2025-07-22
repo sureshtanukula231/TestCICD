@@ -43,6 +43,18 @@ namespace ADE.Tutorial
         }
         public HttpRequestData RunApp(){
             logger.LogInformation("C# HTTP trigger function processed a request on RunApp.");
+
+            var response = req.CreateResponse(HttpStatusCode.OK);
+            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+
+            var now = DateTime.UtcNow;
+
+            response.WriteString($"UTC Time: {now}");
+
+            foreach (var timeZone in timeZones)
+                response.WriteString($"{(timeZone.IsDaylightSavingTime(now) ? timeZone.DaylightName : timeZone.StandardName)}: {TimeZoneInfo.ConvertTimeFromUtc(now, timeZone)}");
+
+            return response;
         }
     }
 }
