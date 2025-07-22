@@ -41,7 +41,7 @@ namespace ADE.Tutorial
 
             return response;
         }
-        public HttpResponseData RunApp(){
+        public HttpResponseData RunApp([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "time")] HttpRequestData req){
             logger.LogInformation("C# HTTP trigger function processed a request on RunApp.");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
