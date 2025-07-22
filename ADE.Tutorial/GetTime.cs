@@ -41,5 +41,8 @@ namespace ADE.Tutorial
 
             return response;
         }
+        public HttpRequestData RunApp(){
+            logger.LogInformation("C# HTTP trigger function processed a request on RunApp.");
+        }
     }
 }
