@@ -101,34 +101,6 @@ namespace HtmlSampleAPI.Controllers
         {
             return $"data:image/png;base64,{FilePath}";
         }
-        //[HttpPost("GenerateInvoice")]
-        //public IActionResult GenerateInvoice()
-        //{
-        //    string htmlPath = Path.Combine(_hostingEnvironment.ContentRootPath, "HtmlTemplates", "invoiceimage.html");
-
-        //    //var pdfBytes = _pdfService.GeneratePdf(htmlPath);
-        //    var pdfBytes = GeneratePdf(htmlPath);
-
-        //    if (pdfBytes == null)
-        //    {
-        //        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "generated.pdf");
-
-        //        var directoryPath = Path.GetDirectoryName(filePath);
-        //        if (!Directory.Exists(directoryPath))
-        //        {
-        //            Directory.CreateDirectory(directoryPath);
-        //        }
-
-        //        System.IO.File.WriteAllBytes(filePath, pdfBytes);
-
-        //        return Ok("Success");
-        //    }
-        //    else
-        //    {
-        //        return Ok("Failed");
-        //    }
-        //}
-
-
+        
     }
 }
