@@ -43,17 +43,6 @@ namespace HtmlSampleAPI.Controllers
             }
 
 
-            //string htmlele = System.IO.File.ReadAllText(body);
-
-            //PdfGenerator.AddPdfPages(document, body, PdfSharpCore.PageSize.A4);
-            //byte[] response = null;
-
-            //using(MemoryStream ms = new MemoryStream())
-            //{
-            //    document.Save(ms);
-            //    response = ms.ToArray();
-            //}
-
             //return File(response,"application/pdf","generatedPDF.pdf");
 
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "generated.pdf");
